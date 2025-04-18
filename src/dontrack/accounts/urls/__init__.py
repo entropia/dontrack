@@ -2,8 +2,8 @@ from typing import Any, List
 
 from django.urls import path
 
-from memon.accounts.views.auth import AuthorizeSSOUser, UserLoginView, UserLogoutView
-from memon.accounts.views.profile import UserProfileView
+from dontrack.accounts.views.auth import AuthorizeSSOUser, UserLoginView, UserLogoutView
+from dontrack.accounts.views.profile import UserProfileView
 
 
 urlpatterns: List[Any] = [
