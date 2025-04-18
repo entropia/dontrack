@@ -1,0 +1,207 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-18 20:53+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: dontrack/accounts/models/user.py:29
+msgid "Display name"
+msgstr "Anzeigename"
+
+#: dontrack/accounts/templates/accounts/user_detail.html:4
+msgid "Profile"
+msgstr "Profil"
+
+#: dontrack/accounts/views/auth.py:25 dontrack/templates/top_nav.html:62
+msgid "Login"
+msgstr "Login"
+
+#: dontrack/accounts/views/auth.py:53
+msgid "Error while creating the user instance!"
+msgstr "Fehler beim Erstellen vom Benutzerobjekt!"
+
+#: dontrack/accounts/views/auth.py:57
+msgid "Successfully logged in!"
+msgstr "Login erfolgreich!"
+
+#: dontrack/accounts/views/auth.py:60
+#, python-format
+msgid "Error while trying to authenticate with sso! %(message)s"
+msgstr "Fehler bei der Authentifizierung via SSO! %(message)s"
+
+#: dontrack/accounts/views/landing_page.py:6
+msgid "Start"
+msgstr "Start"
+
+#: dontrack/donations/models/donation.py:23
+msgid "Donation"
+msgstr "Spende"
+
+#: dontrack/donations/models/donation.py:24
+#: dontrack/donations/views/donations.py:37 dontrack/templates/top_nav.html:5
+msgid "Donations"
+msgstr "Spenden"
+
+#: dontrack/donations/templates/donations/donation_create.html:5
+#: dontrack/donations/views/donations.py:18
+msgid "Create donation"
+msgstr "Spende anlegen"
+
+#: dontrack/donations/templates/donations/donation_create.html:14
+msgid "Create"
+msgstr "Erstellen"
+
+#: dontrack/donations/templates/donations/donation_list.html:11
+msgid "Date"
+msgstr "Datum"
+
+#: dontrack/donations/templates/donations/donation_list.html:12
+msgid "Amount"
+msgstr "Höhe"
+
+#: dontrack/donations/templates/donations/donation_list.html:13
+#: dontrack/donors/models/donor.py:14
+msgid "Name"
+msgstr "Name"
+
+#: dontrack/donations/templates/donations/donation_list.html:14
+#: dontrack/donors/models/donor.py:16
+msgid "Email"
+msgstr "E-Mail"
+
+#: dontrack/donations/templates/donations/donation_list.html:15
+#: dontrack/donors/models/donor.py:18
+msgid "Street"
+msgstr "Straße"
+
+#: dontrack/donations/templates/donations/donation_list.html:16
+#: dontrack/donors/models/donor.py:19
+msgid "Postal code"
+msgstr "Postleitzahl"
+
+#: dontrack/donations/templates/donations/donation_list.html:17
+#: dontrack/donors/models/donor.py:20
+msgid "City"
+msgstr "Stadt"
+
+#: dontrack/donors/models/donor.py:21
+msgid "Country"
+msgstr "Land"
+
+#: dontrack/donors/models/donor.py:25
+msgid "Donor"
+msgstr "Spender"
+
+#: dontrack/donors/models/donor.py:26
+msgid "Donors"
+msgstr "Spender"
+
+#: dontrack/donors/templates/donors/donor_create.html:5
+msgid "Register as donor"
+msgstr "Registrierung als Spender"
+
+#: dontrack/donors/templates/donors/donor_create.html:8
+msgid ""
+"Thanks for your donation! If you fill out this form we will send you a proof "
+"of donation after the event."
+msgstr ""
+"Danke für deine Spende! Wenn du dieses Formular ausfüllst werden wir dir nach "
+"der Veranstaltung eine Spendenbescheinigung zusenden."
+
+#: dontrack/donors/templates/donors/donor_create.html:11
+msgid "Donation time"
+msgstr "Spendenzeitpunkt"
+
+#: dontrack/donors/templates/donors/donor_create.html:14
+msgid "Donation amount"
+msgstr "Spendenhöhe"
+
+#: dontrack/donors/templates/donors/donor_create.html:39
+msgid "Register"
+msgstr "Registrierung"
+
+#: dontrack/donors/templates/donors/qr_view.html:12
+msgid "QR Code for donor registration"
+msgstr "QR-Code für Spendererfassung"
+
+#: dontrack/donors/views/donors.py:20
+msgid "Donor registration QR-Code"
+msgstr "Spendererfassungs QR-Code"
+
+#: dontrack/donors/views/donors.py:32
+msgid "Donor is already registered."
+msgstr "Spender ist bereits erfasst."
+
+#: dontrack/donors/views/donors.py:33
+msgid "Donor registration error"
+msgstr "Fehler bei der Spendererfassung"
+
+#: dontrack/donors/views/donors.py:36
+msgid "Register donor"
+msgstr "Erfasse Spender"
+
+#: dontrack/log/templates/log/log_list.html:5
+msgid "Logs"
+msgstr "Logs"
+
+#: dontrack/log/templates/log/log_list.html:11
+msgid "Timestamp"
+msgstr "Zeitstempel"
+
+#: dontrack/log/templates/log/log_list.html:12
+msgid "User"
+msgstr "Benutzer"
+
+#: dontrack/log/templates/log/log_list.html:13
+msgid "Object type"
+msgstr "Objekt-Typ"
+
+#: dontrack/log/templates/log/log_list.html:14
+msgid "Object"
+msgstr "Objekt"
+
+#: dontrack/log/templates/log/log_list.html:15
+msgid "Change"
+msgstr "Änderung"
+
+#: dontrack/log/views/log.py:11 dontrack/templates/top_nav.html:32
+msgid "Auditlog"
+msgstr "Auditlog"
+
+#: dontrack/settings.py:139
+msgid "German"
+msgstr "Deutsch"
+
+#: dontrack/settings.py:140
+msgid "English"
+msgstr "Englisch"
+
+#: dontrack/templates/top_nav.html:18
+msgid "Register Donation"
+msgstr "Erfasse Spende"
+
+#: dontrack/templates/top_nav.html:24
+msgid "List donations"
+msgstr "Spendenliste"
+
+#: dontrack/templates/top_nav.html:28
+msgid "Download Donors"
+msgstr "Spenderdatei runterladen"
+
+#: dontrack/templates/top_nav.html:44
+msgid "Language selector"
+msgstr "Sprachauswahl"

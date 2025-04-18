@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <title>{{ title }}</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>-->
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/app.css' %}"/>
+    <link rel="shortcut icon" href="{% static "images/favicon.ico" %}"/>
+    {% block head %}{% endblock %}
+</head>
+<body>
+<header>
+    {% include "top_nav.html" %}
+</header>
+<main>
+    <div class="container px-4">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %} m-3 d-flex align-items-center justify-content-between"
+                     role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        {% block content %}{% endblock %}
+    </div>
+</main>
+{% block modals %}{% endblock %}
+{% bootstrap_javascript %}
+<script type="text/javascript" src="{% static "js/fontawesome-all.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/masonary.pkgd.min.js" %}"></script>
+</body>
+</html>

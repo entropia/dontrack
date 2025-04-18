@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="card mb-3 my-3">
+        <div class="card-header card-header-buttons">
+            <h5>{% trans 'Register as donor' %}</h5>
+        </div>
+        <div class="card-body">
+            {% trans 'Thanks for your donation! If you fill out this form we will send you a proof of donation after the event.' %}
+            <form class="row gx-3 gy-3">
+                <div class="col-md-6">
+                    <label class="form-label" for="id_donation_time">{% trans 'Donation time' %}</label><input type="text" name="donation_time" maxlength="255" class="form-control-plaintext" value="{{ donation.created_at }}" id="id_donation_time" readonly>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="id_donation_amount">{% trans 'Donation amount' %}</label><input type="text" name="donation_amount" maxlength="255" class="form-control-plaintext" value="{{ donation.amount }} €" id="id_donation_amount" readonly>
+                </div>
+            </form>
+            <form class="row gx-3 gy-0" method="post">{% csrf_token %}
+                {% bootstrap_form_errors form layout='inline' type='non_fields' %}
+                               {% bootstrap_form_errors form layout='inline' type='non_fields' %}
+                <div class="col-md-6">
+                    {% bootstrap_field form.name %}
+                </div>
+                <div class="col-md-6">
+                    {% bootstrap_field form.email %}
+                </div>
+                <div class="col-md-6">
+                    {% bootstrap_field form.street %}
+                </div>
+                <div class="col-md-6">
+                    {% bootstrap_field form.city %}
+                </div>
+                <div class="col-md-4">
+                    {% bootstrap_field form.postal_code %}
+                </div>
+                <div class="col-md-8">
+                    {% bootstrap_field form.country %}
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-success" type="submit">{% trans 'Register' %}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

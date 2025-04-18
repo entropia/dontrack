@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="card mb-3 my-3">
+        <div class="card-header card-header-buttons">
+            <h5>{% trans 'Create donation' %}</h5>
+        </div>
+        <div class="card-body">
+            <form class="row gx-3 gy-0" method="post">{% csrf_token %}
+                {% bootstrap_form_errors form layout='inline' type='non_fields' %}
+                <div class="col-md-8">
+                    {% bootstrap_field form.amount %}
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-success" type="submit">{% trans 'Create' %}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
