@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-18 20:53+0200\n"
+"POT-Creation-Date: 2025-04-18 23:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,6 +46,10 @@ msgstr "Fehler bei der Authentifizierung via SSO! %(message)s"
 #: dontrack/accounts/views/landing_page.py:6
 msgid "Start"
 msgstr "Start"
+
+#: dontrack/accounts/views/profile.py:12
+msgid "My account"
+msgstr "Mein Account"
 
 #: dontrack/donations/models/donation.py:23
 msgid "Donation"
@@ -119,8 +123,8 @@ msgid ""
 "Thanks for your donation! If you fill out this form we will send you a proof "
 "of donation after the event."
 msgstr ""
-"Danke für deine Spende! Wenn du dieses Formular ausfüllst werden wir dir nach "
-"der Veranstaltung eine Spendenbescheinigung zusenden."
+"Danke für deine Spende! Wenn du dieses Formular ausfüllst werden wir dir "
+"nach der Veranstaltung eine Spendenbescheinigung zusenden."
 
 #: dontrack/donors/templates/donors/donor_create.html:11
 msgid "Donation time"
