@@ -21,7 +21,7 @@ classifiers = [
 dependencies = [
     'Django==5.2',
     'django-auditlog==3.0.0',
-    'django-bootstrap5==24.3',
+    'django-bootstrap5==25.1',
     'django-qr-code==4.1.0',
     'django-localflavor==4.0',
     'gunicorn==23.0.0',
