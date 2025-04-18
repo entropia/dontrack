@@ -441,7 +441,7 @@ venv.bak/
 .ropeproject
 
 # mkdocs documentation
-src/memon/static/docs
+src/dontrack/static/docs
 
 # mypy
 .mypy_cache/
