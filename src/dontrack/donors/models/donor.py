@@ -24,3 +24,4 @@ class Donor(models.Model):
         ordering = ["-created_at"]
         verbose_name = _("Donor")
         verbose_name_plural = _("Donors")
+        default_permissions = ()

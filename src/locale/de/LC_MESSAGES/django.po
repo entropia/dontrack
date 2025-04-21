@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-18 23:14+0200\n"
+"POT-Creation-Date: 2025-04-21 18:39+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: dontrack/accounts/models/user.py:29
+#: dontrack/accounts/models/user.py:30
 msgid "Display name"
 msgstr "Anzeigename"
 
@@ -56,7 +56,7 @@ msgid "Donation"
 msgstr "Spende"
 
 #: dontrack/donations/models/donation.py:24
-#: dontrack/donations/views/donations.py:37 dontrack/templates/top_nav.html:5
+#: dontrack/donations/views/donations.py:38 dontrack/templates/top_nav.html:5
 msgid "Donations"
 msgstr "Spenden"
 
@@ -193,6 +193,22 @@ msgstr "Deutsch"
 #: dontrack/settings.py:140
 msgid "English"
 msgstr "Englisch"
+
+#: dontrack/templates/403.html:3
+msgid "You should not be here"
+msgstr "Du darst hier nicht sein"
+
+#: dontrack/templates/403.html:4
+msgid "You don't have access to this page"
+msgstr "Du hast keinen Zugriff auf die Seite"
+
+#: dontrack/templates/403.html:5
+msgid "Return to the"
+msgstr "Zurück zur"
+
+#: dontrack/templates/403.html:5
+msgid "home page"
+msgstr "Homepage"
 
 #: dontrack/templates/top_nav.html:18
 msgid "Register Donation"

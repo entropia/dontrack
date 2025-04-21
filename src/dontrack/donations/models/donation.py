@@ -22,6 +22,10 @@ class Donation(models.Model):
         ordering = ["created_at"]
         verbose_name = _("Donation")
         verbose_name_plural = _("Donations")
+        default_permissions = ()
+        permissions = [
+            ('register_donation', 'May register donations'), ('list_donations', 'May list donations' ),
+        ]
 
     def __str__(self) -> str:
         if self.donor is None:

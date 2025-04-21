@@ -2,7 +2,8 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser, Permission
+from django.core.exceptions import ObjectDoesNotExist
 from django.db import models
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
@@ -45,3 +46,18 @@ class User(BaseUser):
 
     def get_absolute_url(self) -> str:
         return reverse('user_profile')
+
+    def has_perm(self, perm, obj=None) -> bool:
+        if not self.is_active:
+            return False
+        for group in self.groups.all():
+            try:
+                if perm in settings.permissions[group.name]:
+                    return True
+            except KeyError:
+                pass
+        return False
+
+    # Is no used
+    def has_module_perms(self, app_label: str) -> bool:
+        return False
