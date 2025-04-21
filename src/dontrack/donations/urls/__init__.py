@@ -9,4 +9,3 @@ urlpatterns: List[Any] = [
     path('export', DonationExportView.as_view(), name="donation_export"),
     path('create', DonationCreateView.as_view(),name='donation_create'),
 ]
-

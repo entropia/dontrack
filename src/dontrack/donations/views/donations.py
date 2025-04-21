@@ -1,6 +1,7 @@
 from typing import Optional
 
-from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.contrib.auth.mixins import PermissionRequiredMixin
+from django.http import HttpResponse
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView, ListView
@@ -23,13 +24,13 @@ class DonationCreateView(PermissionRequiredMixin, CreateView):
     template_name = 'donations/donation_create.html'
     success_url = reverse_lazy('donation_create')
     permission_required = 'donations.register_donation'
-    def form_valid(self, form):
+    def form_valid(self, form) -> HttpResponse:
         item = form.save()
         self.pk = item.pk
-        return super(DonationCreateView, self).form_valid(form)
+        return super().form_valid(form)
 
-    def get_success_url(self):
-         return reverse_lazy('donor_qr', kwargs={'pk': self.pk})
+    def get_success_url(self) -> str:
+        return reverse_lazy('donor_qr', kwargs={'pk': self.pk})
 
 class DonationListView(PermissionRequiredMixin, ListView):
     model = Donation

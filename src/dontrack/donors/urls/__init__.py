@@ -10,4 +10,3 @@ urlpatterns: List[Any] = [
     path('register/<uuid:pk>', DonorRegistrationView.as_view(), name="donor_registration"),
     path('register/success', DonorRegistrationSuccessView.as_view(), name="donor_registration_success"),
 ]
-

@@ -15,4 +15,3 @@ urlpatterns: List[Any] = [
     # sso
     path('auth/', AuthorizeSSOUser.as_view(), name='auth'),
 ]
-

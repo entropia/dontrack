@@ -53,7 +53,7 @@ class AuthorizeSSOUser(RedirectView):
                 messages.error(request, _('Error while creating the user instance!'))
                 return HttpResponseRedirect(settings.LOGIN_URL)
             redirect_to = request.GET.get(REDIRECT_FIELD_NAME)
-            login_user(self.request, user)
+            login_user(self.request, user) # type: ignore[arg-type]
             messages.success(request, _('Successfully logged in!'))
             return HttpResponseRedirect(redirect_to or settings.LOGIN_REDIRECT_URL)
         except OAuthError as e:
@@ -81,7 +81,7 @@ class AuthorizeSSOUser(RedirectView):
                 Group.objects.get_or_create(name=group)
         try:
             user: AbstractUser = User.objects.get_by_natural_key(username)
-        except UserModel.DoesNotExist:
+        except UserModel.DoesNotExist: # type: ignore[attr-defined]
             user = User.objects.create(username=username)
             user.set_unusable_password()
             user.display_name = user_data.get(settings.OAUTH_DISPLAY_NAME_CLAIM, '')
@@ -89,7 +89,6 @@ class AuthorizeSSOUser(RedirectView):
         user.groups.set(Group.objects.filter(name__in=groups))
         user.is_superuser = False
         user.is_staff = False
-        user.backend = 'django.contrib.auth.backends.ModelBackend'
         user.save()
         return user
 

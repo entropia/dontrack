@@ -1,10 +1,10 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Optional
 
-from django.contrib.auth.models import AbstractUser, Permission
-from django.core.exceptions import ObjectDoesNotExist
+from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.db.models import Model
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 
@@ -17,7 +17,7 @@ class BaseUser(AbstractUser):
     class Meta:
         default_permissions = ()
 
-    def __str__(self):
+    def __str__(self) -> str:
         return self.display
 
     @property
@@ -47,7 +47,7 @@ class User(BaseUser):
     def get_absolute_url(self) -> str:
         return reverse('user_profile')
 
-    def has_perm(self, perm, obj=None) -> bool:
+    def has_perm(self, perm: str, obj: Optional[Model] = None) -> bool:
         if not self.is_active:
             return False
         for group in self.groups.all():

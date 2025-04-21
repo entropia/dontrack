@@ -185,7 +185,7 @@ try:
 except ImportError:
     pass
 
-# ToDo: Implement permission system
+
 from .permissions import permissions
 PERMISSIONS = permissions
-COMMON_PERMISSIONS = []
+COMMON_PERMISSIONS: list[str] = []
