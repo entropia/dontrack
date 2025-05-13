@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Optional
+from typing import Optional
 
 from django.contrib.auth.models import AbstractUser
 from django.db import models
@@ -10,8 +10,6 @@ from django.utils.translation import gettext_lazy as _
 
 from dontrack import settings
 
-if TYPE_CHECKING:
-    pass
 
 class BaseUser(AbstractUser):
     class Meta:
@@ -33,16 +31,14 @@ class User(BaseUser):
         default_permissions = ()
         ordering = ['username']
 
-    def __str__(self) -> str:
-        return f'{self.display_name}'
+    def __str__(self):
+        return self.display
 
     @property
-    def is_executive(self) -> bool:
-        return self.groups.filter(name=settings.OAUTH_ADMIN_GROUP).exists()
-
-    @property
-    def is_registration(self) -> bool:
-        return self.groups.filter(name=settings.OAUTH_STAFF_GROUP).exists()
+    def display(self) -> str:
+        if self.display_name is None:
+            return self.get_full_name()
+        return self.display_name
 
     def get_absolute_url(self) -> str:
         return reverse('user_profile')

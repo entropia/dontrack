@@ -12,13 +12,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                {% if request.user.is_registration or request.user.is_executive %}
+                {% if perms.donations.register_donation %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'donation_create' %}"><span class="fa-fw fa-solid fa-pen-to-square"></span>
                             {% trans 'Register Donation' %}</a>
                     </li>
                 {% endif %}
-                {% if request.user.is_executive %}
+                {% if perms.donations.list_donations %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'donation_list' %}"><span class="fa-fw fa-solid fa-people-group"></span>
                             {% trans 'List donations' %}</a>
@@ -27,6 +27,8 @@
                         <a class="nav-link" href="{% url 'donation_export' %}"><span class="fa-fw fa-solid fa-file-arrow-down"></span>
                             {% trans 'Download Donors' %}</a>
                     </li>
+                {% endif %}
+                {% if perms.log.view_log %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'log_list' %}"><span
                                 class="fa-fw fa-solid fa-clock-rotate-left"></span> {% trans 'Auditlog' %}</a>
