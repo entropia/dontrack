@@ -1,7 +1,7 @@
-from typing import Optional
+from typing import Optional, Any
 
 from django.contrib.auth.mixins import PermissionRequiredMixin
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import CreateView, ListView
@@ -45,4 +45,29 @@ class DonationExportView(PermissionRequiredMixin, ListView):
     model = Donation
     object: Donation
     permission_required = 'donations.list_donations'
-    template_name = 'donations/donation_list.json'
+
+    def get_context_data(self, *, object_list = ..., **kwargs) -> dict[str, Any]:
+        context = super().get_context_data()
+        context['object_list'] = context['object_list'].filter(donor__isnull=False)
+        return context
+
+    def render_to_response(self, context, **response_kwargs) -> JsonResponse:
+        data = []
+
+        for donation in context['object_list']:
+            entry = {
+                "geld": {
+                    "datum": donation.created_at.strftime('%Y-%m-%d'),
+                    "art": "Geldzuwendung",
+                    "betrag": float(donation.amount),
+                    "verzicht": False
+                },
+                "spender": {
+                    "name": donation.donor.name,
+                    "adresse": f"{donation.donor.street}\n{donation.donor.postal_code} {donation.donor.city} ({donation.donor.country})",
+                    "email": donation.donor.email,
+                }
+            }
+            data.append(entry)
+
+        return JsonResponse(data, safe=False, json_dumps_params={"ensure_ascii": False, "indent": 2})
