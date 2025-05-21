@@ -23,7 +23,7 @@ dependencies = [
     'django-auditlog==3.1.2',
     'django-bootstrap5==25.1',
     'django-qr-code==4.2.0',
-    'django-localflavor==4.0',
+    'django-localflavor==5.0',
     'gunicorn==23.0.0',
     'psycopg2-binary==2.9.10',
     'Authlib==1.5.2',
