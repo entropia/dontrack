@@ -26,7 +26,7 @@ dependencies = [
     'django-localflavor==4.0',
     'gunicorn==23.0.0',
     'psycopg2-binary==2.9.10',
-    'Authlib==1.5.2',
+    'Authlib==1.6.0',
     'requests==2.32.3',
     'python-dateutil==2.9.0.post0',
 ]
