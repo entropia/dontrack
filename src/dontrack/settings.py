@@ -177,14 +177,20 @@ LOGIN_URL = reverse_lazy('login')
 LOGIN_REDIRECT_URL = reverse_lazy('user_profile')
 OAUTH_GROUP_IGNORE_REGEX = r'ignore group regex'
 
+PRETIX_IMPORT = False
+
 try:
     from bootstrap.settings import BOOTSTRAP5
 
     # try to load local settings (for production settings or rpc passwords)
     from .local_settings import *
+    if PRETIX_IMPORT:
+        from dontrack_pretix.settings import *
 except ImportError:
     pass
 
+if PRETIX_IMPORT:
+    INSTALLED_APPS.append('dontrack_pretix')
 
 from .permissions import permissions
 PERMISSIONS = permissions
