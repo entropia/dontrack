@@ -1,7 +1,7 @@
 from typing import Any
 
 from django.conf import settings
-from django.http import HttpResponseRedirect, HttpRequest, HttpResponse, HttpResponseNotAllowed
+from django.http import HttpResponseRedirect, HttpRequest, HttpResponse, HttpResponseNotAllowed, HttpResponseNotFound
 from django.urls import reverse_lazy
 from django.views.generic import RedirectView
 
@@ -16,6 +16,9 @@ class PretixImportView(RedirectView):
 
         # Get eligible products
         product_ids = api_client.get_products_in_quota(settings.PRETIX_DONATION_QUOTA)
+
+        if product_ids is None:
+            return HttpResponseNotFound()
 
         # Retrieve order information
         order = api_client.get_orderpositions({'pseudonymization_id': kwargs['pseudo_id']})
