@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="card mb-3 my-3">
+        <div class="card-header card-header-buttons">
+            <h5>{{ title }}</h5>
+        </div>
+        <div class="card-body table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col" class="col-2">{% trans 'Date' %}</th>
+                    <th scope="col" class="col-1">{% trans 'Pretix order id' %}</th>
+                    <th scope="col" class="col-2">{% trans 'Pretix position id' %}</th>
+                    <th scope="col" class="col-2">{% trans 'Amount' %}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for object in object_list %}
+                    <tr>
+                        <td>{{ object.created_at }}</td>
+                        <td>{{ object.order_id }}</td>
+                        <td>{{ object.position_id }}</td>
+                        <td>{{ object.donation.amount }} €</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

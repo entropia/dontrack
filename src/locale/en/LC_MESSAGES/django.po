@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-15 11:55+0200\n"
+"POT-Creation-Date: 2025-06-15 16:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,7 @@ msgstr "Display name"
 msgid "Profile"
 msgstr "Profile"
 
-#: dontrack/accounts/views/auth.py:25 dontrack/templates/top_nav.html:64
+#: dontrack/accounts/views/auth.py:25 dontrack/templates/top_nav.html:70
 msgid "Login"
 msgstr "Login"
 
@@ -53,6 +53,7 @@ msgstr "My account"
 
 #: dontrack/donations/models/donation.py:16
 #: dontrack/donations/templates/donations/donation_list.html:12
+#: dontrack_pretix/templates/pretix/order_list.html:14
 msgid "Amount"
 msgstr "Amount"
 
@@ -79,6 +80,7 @@ msgid "Create"
 msgstr "Create"
 
 #: dontrack/donations/templates/donations/donation_list.html:11
+#: dontrack_pretix/templates/pretix/order_list.html:11
 msgid "Date"
 msgstr "Date"
 
@@ -183,7 +185,7 @@ msgstr "Object"
 msgid "Change"
 msgstr "Change"
 
-#: dontrack/log/views/log.py:11 dontrack/templates/top_nav.html:34
+#: dontrack/log/views/log.py:11 dontrack/templates/top_nav.html:40
 msgid "Auditlog"
 msgstr "Auditlog"
 
@@ -223,15 +225,21 @@ msgstr "List donations"
 msgid "Download donors"
 msgstr "Download donors"
 
-#: dontrack/templates/top_nav.html:46
+#: dontrack/templates/top_nav.html:34 dontrack_pretix/views/pretix.py:45
+msgid "Claimed orders"
+msgstr "Claimed orders"
+
+#: dontrack/templates/top_nav.html:52
 msgid "Language selector"
 msgstr "Language selector"
 
 #: dontrack_pretix/models/order.py:15
+#: dontrack_pretix/templates/pretix/order_list.html:12
 msgid "Pretix order id"
 msgstr "Pretix order id"
 
 #: dontrack_pretix/models/order.py:16
+#: dontrack_pretix/templates/pretix/order_list.html:13
 msgid "Pretix position id"
 msgstr "Pretix position id"
 

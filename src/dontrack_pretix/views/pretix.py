@@ -3,11 +3,13 @@ from typing import Any
 from django.conf import settings
 from django.http import HttpResponseRedirect, HttpRequest, HttpResponse, HttpResponseNotAllowed, HttpResponseNotFound
 from django.urls import reverse_lazy
-from django.views.generic import RedirectView
+from django.utils.translation import gettext_lazy as _
+from django.views.generic import RedirectView, ListView
 
 from dontrack.donations.models import Donation
 from dontrack_pretix.models.order import Order
 from dontrack_pretix.utils.pretix_api import PretixApiClient
+
 
 
 class PretixImportView(RedirectView):
@@ -35,3 +37,12 @@ class PretixImportView(RedirectView):
                 return HttpResponseRedirect(reverse_lazy('donor_registration', kwargs={'pk': donation.pk}))
         else:
             return HttpResponseNotAllowed(permitted_methods='GET')
+
+class PretixClaimedOrdersView(ListView):
+    model = Order
+    object: Order
+    extra_context = {
+        'title': _('Claimed orders'),
+    }
+    permission_required = 'log.view_log'
+    template_name = 'pretix/order_list.html'

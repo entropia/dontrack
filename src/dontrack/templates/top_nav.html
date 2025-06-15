@@ -28,6 +28,12 @@
                             {% trans 'Download donors' %}</a>
                     </li>
                 {% endif %}
+                {% if perms.log.view_log and settings.PRETIX_IMPORT %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'pretix_claimed_orders' %}"><span
+                                class="fa-fw fa-solid fa-handshake"></span> {% trans 'Claimed orders' %}</a>
+                    </li>
+                {% endif %}
                 {% if perms.log.view_log %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'log_list' %}"><span
