@@ -15,7 +15,7 @@
                 {% if perms.donations.register_donation %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'donation_create' %}"><span class="fa-fw fa-solid fa-pen-to-square"></span>
-                            {% trans 'Register Donation' %}</a>
+                            {% trans 'Register donation' %}</a>
                     </li>
                 {% endif %}
                 {% if perms.donations.list_donations %}
@@ -25,7 +25,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'donation_export' %}"><span class="fa-fw fa-solid fa-file-arrow-down"></span>
-                            {% trans 'Download Donors' %}</a>
+                            {% trans 'Download donors' %}</a>
                     </li>
                 {% endif %}
                 {% if perms.log.view_log %}

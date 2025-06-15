@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-21 18:39+0200\n"
+"POT-Creation-Date: 2025-06-15 11:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: dontrack/accounts/models/user.py:30
+#: dontrack/accounts/models/user.py:28
 msgid "Display name"
 msgstr "Display name"
 
@@ -26,7 +26,7 @@ msgstr "Display name"
 msgid "Profile"
 msgstr "Profile"
 
-#: dontrack/accounts/views/auth.py:25 dontrack/templates/top_nav.html:62
+#: dontrack/accounts/views/auth.py:25 dontrack/templates/top_nav.html:64
 msgid "Login"
 msgstr "Login"
 
@@ -47,21 +47,30 @@ msgstr "Error while trying to authenticate with sso! %(message)s"
 msgid "Start"
 msgstr "Start"
 
-#: dontrack/accounts/views/profile.py:12
+#: dontrack/accounts/views/profile.py:13
 msgid "My account"
 msgstr "My account"
 
-#: dontrack/donations/models/donation.py:23
+#: dontrack/donations/models/donation.py:16
+#: dontrack/donations/templates/donations/donation_list.html:12
+msgid "Amount"
+msgstr "Amount"
+
+#: dontrack/donations/models/donation.py:19 dontrack/donors/models/donor.py:25
+msgid "Donor"
+msgstr "Donor"
+
+#: dontrack/donations/models/donation.py:23 dontrack_pretix/models/order.py:19
 msgid "Donation"
 msgstr "Donation"
 
 #: dontrack/donations/models/donation.py:24
-#: dontrack/donations/views/donations.py:38 dontrack/templates/top_nav.html:5
+#: dontrack/donations/views/donations.py:39 dontrack/templates/top_nav.html:5
 msgid "Donations"
 msgstr "Donations"
 
 #: dontrack/donations/templates/donations/donation_create.html:5
-#: dontrack/donations/views/donations.py:18
+#: dontrack/donations/views/donations.py:19
 msgid "Create donation"
 msgstr "Create donation"
 
@@ -72,10 +81,6 @@ msgstr "Create"
 #: dontrack/donations/templates/donations/donation_list.html:11
 msgid "Date"
 msgstr "Date"
-
-#: dontrack/donations/templates/donations/donation_list.html:12
-msgid "Amount"
-msgstr "Amount"
 
 #: dontrack/donations/templates/donations/donation_list.html:13
 #: dontrack/donors/models/donor.py:14
@@ -105,10 +110,6 @@ msgstr "City"
 #: dontrack/donors/models/donor.py:21
 msgid "Country"
 msgstr "Country"
-
-#: dontrack/donors/models/donor.py:25
-msgid "Donor"
-msgstr "Donor"
 
 #: dontrack/donors/models/donor.py:26
 msgid "Donors"
@@ -142,19 +143,19 @@ msgstr "Register"
 msgid "QR Code for donor registration"
 msgstr "QR Code for donor registration"
 
-#: dontrack/donors/views/donors.py:20
+#: dontrack/donors/views/donors.py:22
 msgid "Donor registration QR-Code"
 msgstr "Donor registration QR-Code"
 
-#: dontrack/donors/views/donors.py:32
+#: dontrack/donors/views/donors.py:35
 msgid "Donor is already registered."
 msgstr "Donor is already registered."
 
-#: dontrack/donors/views/donors.py:33
+#: dontrack/donors/views/donors.py:37
 msgid "Donor registration error"
 msgstr "Donor registration error"
 
-#: dontrack/donors/views/donors.py:36
+#: dontrack/donors/views/donors.py:39
 msgid "Register donor"
 msgstr "Register donor"
 
@@ -182,7 +183,7 @@ msgstr "Object"
 msgid "Change"
 msgstr "Change"
 
-#: dontrack/log/views/log.py:11 dontrack/templates/top_nav.html:32
+#: dontrack/log/views/log.py:11 dontrack/templates/top_nav.html:34
 msgid "Auditlog"
 msgstr "Auditlog"
 
@@ -211,17 +212,37 @@ msgid "home page"
 msgstr "home page"
 
 #: dontrack/templates/top_nav.html:18
-msgid "Register Donation"
-msgstr "Register Donation"
+msgid "Register donation"
+msgstr "Register donation"
 
 #: dontrack/templates/top_nav.html:24
 msgid "List donations"
 msgstr "List donations"
 
 #: dontrack/templates/top_nav.html:28
-msgid "Download Donors"
-msgstr "Download Donors"
+msgid "Download donors"
+msgstr "Download donors"
 
-#: dontrack/templates/top_nav.html:44
+#: dontrack/templates/top_nav.html:46
 msgid "Language selector"
 msgstr "Language selector"
+
+#: dontrack_pretix/models/order.py:15
+msgid "Pretix order id"
+msgstr "Pretix order id"
+
+#: dontrack_pretix/models/order.py:16
+msgid "Pretix position id"
+msgstr "Pretix position id"
+
+#: dontrack_pretix/models/order.py:23
+#, fuzzy
+#| msgid "Pretix order id"
+msgid "Pretix order"
+msgstr "Pretix order id"
+
+#: dontrack_pretix/models/order.py:24
+#, fuzzy
+#| msgid "Pretix order id"
+msgid "Pretix orders"
+msgstr "Pretix order id"
