@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-15 16:51+0200\n"
+"POT-Creation-Date: 2025-06-15 17:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,6 +25,80 @@ msgstr "Display name"
 #: dontrack/accounts/templates/accounts/user_detail.html:4
 msgid "Profile"
 msgstr "Profile"
+
+#: dontrack/accounts/templates/landing_page.html:3
+msgid "Donor registration tool"
+msgstr "Donor registration tool"
+
+#: dontrack/accounts/templates/landing_page.html:4
+msgid ""
+"This tool allows donors to provide their personal information so Entropia "
+"e.V. can create a tax receipt for you."
+msgstr ""
+"This tool allows donors to provide their personal information so Entropia "
+"e.V. can create a tax receipt for you."
+
+#: dontrack/accounts/templates/landing_page.html:4
+msgid ""
+"If you want to donate to Entropia e.V. or the Gulschprogrammiernacht please "
+"head to the infodesk if you are on site or "
+msgstr ""
+"If you want to donate to Entropia e.V. or the Gulschprogrammiernacht please "
+"head to the infodesk if you are on site or "
+
+#: dontrack/accounts/templates/landing_page.html:4
+msgid "the website"
+msgstr "the website"
+
+#: dontrack/accounts/templates/landing_page.html:4
+msgid " or the "
+msgstr " or the "
+
+#: dontrack/accounts/templates/landing_page.html:4
+msgid "webshop"
+msgstr "webshop"
+
+#: dontrack/accounts/templates/landing_page.html:5
+msgid "How does this work"
+msgstr "How does this work"
+
+#: dontrack/accounts/templates/landing_page.html:6
+msgid ""
+"After you donated to the event on site you get a receipt with a unique QR-"
+"code. Using the QR-code you can claim your donation and provide your "
+"details. If you donated multiple times you will have to repeat this process."
+msgstr ""
+"After you donated to the event on site you get a receipt with a unique QR-"
+"code. Using the QR-code you can claim your donation and provide your "
+"details. If you donated multiple times you will have to repeat this process."
+
+#: dontrack/accounts/templates/landing_page.html:7
+msgid "And my webshop donation"
+msgstr "And my webshop donation"
+
+#: dontrack/accounts/templates/landing_page.html:8
+msgid ""
+"If you donated through the webshop and provided your name and address "
+"through through the invoice information we will send you a receipt after the "
+"event."
+msgstr ""
+"If you donated through the webshop and provided your name and address "
+"through through the invoice information we will send you a receipt after the "
+"event."
+
+#: dontrack/accounts/templates/landing_page.html:9
+msgid "What if I donated directly to your bank account"
+msgstr "What if I donated directly to your bank account"
+
+#: dontrack/accounts/templates/landing_page.html:10
+msgid ""
+"If you donated directly to our bank account, please drop us an email at "
+"\"vorstand [at] entropia [dot] de\" with details about your donation and we "
+"will send you a receipt."
+msgstr ""
+"If you donated directly to our bank account, please drop us an email at "
+"\"vorstand [at] entropia [dot] de\" with details about your donation and we "
+"will send you a receipt."
 
 #: dontrack/accounts/views/auth.py:25 dontrack/templates/top_nav.html:70
 msgid "Login"
@@ -205,13 +279,21 @@ msgstr "You should not be here"
 msgid "You don't have access to this page"
 msgstr "You don't have access to this page"
 
-#: dontrack/templates/403.html:5
+#: dontrack/templates/403.html:5 dontrack/templates/404.html:5
 msgid "Return to the"
 msgstr "Return to the"
 
-#: dontrack/templates/403.html:5
+#: dontrack/templates/403.html:5 dontrack/templates/404.html:5
 msgid "home page"
 msgstr "home page"
+
+#: dontrack/templates/404.html:3
+msgid "Not found"
+msgstr "Not found"
+
+#: dontrack/templates/404.html:4
+msgid "There is nothing here."
+msgstr "There is nothing here."
 
 #: dontrack/templates/top_nav.html:18
 msgid "Register donation"
@@ -244,13 +326,9 @@ msgid "Pretix position id"
 msgstr "Pretix position id"
 
 #: dontrack_pretix/models/order.py:23
-#, fuzzy
-#| msgid "Pretix order id"
 msgid "Pretix order"
 msgstr "Pretix order id"
 
 #: dontrack_pretix/models/order.py:24
-#, fuzzy
-#| msgid "Pretix order id"
 msgid "Pretix orders"
 msgstr "Pretix order id"

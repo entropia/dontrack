@@ -1,4 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>Willkommen!</h1>
+    <h3 class="mt-3">{% trans 'Donor registration tool' %}</h3>
+    <p>{% trans 'This tool allows donors to provide their personal information so Entropia e.V. can create a tax receipt for you.' %}<br/>{% trans 'If you want to donate to Entropia e.V. or the Gulschprogrammiernacht please head to the infodesk if you are on site or ' %}<a href="https://entropia.de/Bankverbindung">{% trans 'the website' %}</a>{% trans ' or the ' %}<a href="https://join.gulas.ch">{% trans 'webshop' %}</a>.</p>
+    <h4>{% trans 'How does this work' %}?</h4>
+    <p>{% trans 'After you donated to the event on site you get a receipt with a unique QR-code. Using the QR-code you can claim your donation and provide your details. If you donated multiple times you will have to repeat this process.' %}</p>
+    <h4>{% trans 'And my webshop donation' %}?</h4>
+    <p>{% trans 'If you donated through the webshop and provided your name and address through through the invoice information we will send you a receipt after the event.' %}</p>
+    <h4>{% trans 'What if I donated directly to your bank account' %}?</h4>
+    <p>{% trans 'If you donated directly to our bank account, please drop us an email at "vorstand [at] entropia [dot] de" with details about your donation and we will send you a receipt.' %}</p>
 {% endblock %}

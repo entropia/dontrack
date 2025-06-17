@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-15 16:51+0200\n"
+"POT-Creation-Date: 2025-06-15 17:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,6 +25,79 @@ msgstr "Anzeigename"
 #: dontrack/accounts/templates/accounts/user_detail.html:4
 msgid "Profile"
 msgstr "Profil"
+
+#: dontrack/accounts/templates/landing_page.html:3
+msgid "Donor registration tool"
+msgstr "Spendererfassung"
+
+#: dontrack/accounts/templates/landing_page.html:4
+msgid ""
+"This tool allows donors to provide their personal information so Entropia "
+"e.V. can create a tax receipt for you."
+msgstr ""
+"Diese Software erlaubt es Spendern ihre persönlichen Daten an den Entropia "
+"e.V. zu geben, damit eine Spendenbescheinigung ausgestellt werden kann."
+
+#: dontrack/accounts/templates/landing_page.html:4
+msgid ""
+"If you want to donate to Entropia e.V. or the Gulschprogrammiernacht please "
+"head to the infodesk if you are on site or "
+msgstr ""
+"Wenn du an den Entropia e.V. oder die Gulaschprogrammiernacht spenden "
+"möchtest, gehe bitte zum Infodesk, wenn du vor Ort bist oder "
+
+#: dontrack/accounts/templates/landing_page.html:4
+msgid "the website"
+msgstr "die Webseite"
+
+#: dontrack/accounts/templates/landing_page.html:4
+msgid " or the "
+msgstr " oder den "
+
+#: dontrack/accounts/templates/landing_page.html:4
+msgid "webshop"
+msgstr "Webshop"
+
+#: dontrack/accounts/templates/landing_page.html:5
+msgid "How does this work"
+msgstr "Wie funktioniert das"
+
+#: dontrack/accounts/templates/landing_page.html:6
+msgid ""
+"After you donated to the event on site you get a receipt with a unique QR-"
+"code. Using the QR-code you can claim your donation and provide your "
+"details. If you donated multiple times you will have to repeat this process."
+msgstr ""
+"Nachdem du auf der Veranstaltung gespendet hast, erhältst du einen einzigartigen"
+"QR-Code. Mit diesem Code kannst du deine Spende registrieren und deine "
+"persönlichen Daten angeben. Wenn du mehrfach gespendet hast, musst du diesen "
+"Prozess wiederholen."
+
+#: dontrack/accounts/templates/landing_page.html:7
+msgid "And my webshop donation"
+msgstr "Und meine Webshop Spende"
+
+#: dontrack/accounts/templates/landing_page.html:8
+msgid ""
+"If you donated through the webshop and provided your name and address "
+"through through the invoice information we will send you a receipt after the "
+"event."
+msgstr ""
+"Wenn du über unseren Webshop gespendet hast und Rechnungsdaten hinterlegt hast, "
+"senden wir dir nach der Veranstaltung eine Bescheinigung zu."
+
+#: dontrack/accounts/templates/landing_page.html:9
+msgid "What if I donated directly to your bank account"
+msgstr "Was mache ich, wenn ich direkt an das Bankkonto gespendet habe"
+
+#: dontrack/accounts/templates/landing_page.html:10
+msgid ""
+"If you donated directly to our bank account, please drop us an email at "
+"\"vorstand [at] entropia [dot] de\" with details about your donation and we "
+"will send you a receipt."
+msgstr ""
+"Wenn du direkt an unser Bankkonto gespendet hast, schreib uns bitte an \"vorstand [at] entropia [punkt] de\" "
+"mit Details zu deiner Spende und wir senden dir eine Bescheinigung zu."
 
 #: dontrack/accounts/views/auth.py:25 dontrack/templates/top_nav.html:70
 msgid "Login"
@@ -205,13 +278,21 @@ msgstr "Du darst hier nicht sein"
 msgid "You don't have access to this page"
 msgstr "Du hast keinen Zugriff auf die Seite"
 
-#: dontrack/templates/403.html:5
+#: dontrack/templates/403.html:5 dontrack/templates/404.html:5
 msgid "Return to the"
 msgstr "Zurück zur"
 
-#: dontrack/templates/403.html:5
+#: dontrack/templates/403.html:5 dontrack/templates/404.html:5
 msgid "home page"
 msgstr "Homepage"
+
+#: dontrack/templates/404.html:3
+msgid "Not found"
+msgstr "Nicht gefunden"
+
+#: dontrack/templates/404.html:4
+msgid "There is nothing here."
+msgstr "Hier wurde nichts gefunden."
 
 #: dontrack/templates/top_nav.html:18
 msgid "Register donation"
