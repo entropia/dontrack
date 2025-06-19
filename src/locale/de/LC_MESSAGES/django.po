@@ -170,7 +170,7 @@ msgstr "E-Mail"
 #: dontrack/donations/templates/donations/donation_list.html:15
 #: dontrack/donors/models/donor.py:18
 msgid "Street"
-msgstr "Straße"
+msgstr "Straße (Hausnummer)"
 
 #: dontrack/donations/templates/donations/donation_list.html:16
 #: dontrack/donors/models/donor.py:19
