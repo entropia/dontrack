@@ -19,7 +19,7 @@ classifiers = [
 ]
 
 dependencies = [
-    'Django==5.2.4',
+    'Django==5.2.7',
     'django-auditlog==3.3.0',
     'django-bootstrap5==25.2',
     'django-qr-code==4.2.0',
