@@ -35,7 +35,7 @@ dependencies = [
 tests = [
     'coverage==7.10.1',
     'django-stubs==5.2.2',
-    'mypy==1.17.1',
+    'mypy==1.18.2',
     'pylint==3.3.7',
     'pylint-django==2.6.1',
     'types-requests~=2.32.0',
