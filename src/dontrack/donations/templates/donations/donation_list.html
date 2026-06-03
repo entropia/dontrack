@@ -21,7 +21,7 @@
                 <tbody>
                 {% for object in object_list %}
                     <tr>
-                        <td>{{ object.created_at }}</td>
+                        <td>{{ object.donation_date }}</td>
                         <td>{{ object.amount }} €</td>
                         <td>{{ object.donor.name|default_if_none:'-' }}</td>
                         <td>{{ object.donor.email|default_if_none:'-' }}</td>

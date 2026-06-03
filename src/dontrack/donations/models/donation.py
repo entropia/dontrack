@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import uuid
+from datetime import datetime
 
 from django.core.validators import MinValueValidator
 from django.db import models
@@ -14,6 +15,8 @@ class Donation(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     amount = models.DecimalField(decimal_places=2, max_digits=10, verbose_name=_("Amount"), validators=[MinValueValidator(0)])
+
+    donation_date = models.DateField(null=True, blank=True, default=datetime.now, verbose_name=_("Donation date"))
 
     donor = models.ForeignKey('donors.Donor', null=True, on_delete=models.CASCADE, related_name="donations",
                               verbose_name=_("Donor"))

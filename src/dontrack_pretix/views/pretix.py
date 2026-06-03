@@ -3,6 +3,7 @@ from typing import Any
 from django.conf import settings
 from django.http import HttpResponseRedirect, HttpRequest, HttpResponse, HttpResponseNotAllowed, HttpResponseNotFound
 from django.urls import reverse_lazy
+from django.utils.dateparse import parse_datetime
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import RedirectView, ListView
 
@@ -32,8 +33,9 @@ class PretixImportView(RedirectView):
                 registered_order = Order.objects.get(order_id=order[0].get('order'), position_id=order[0].get('positionid'))
                 return HttpResponseRedirect(reverse_lazy('donor_registration', kwargs={'pk': registered_order.donation.pk}))
             except Order.DoesNotExist:
-                donation = Donation.objects.create(amount=order[0].get('price'))
-                Order.objects.create(order_id=order[0].get('order'), position_id=order[0].get('positionid'), donation=donation)
+                order_date = parse_datetime(order[0].get('print_logs')[0].get('datetime'))
+                donation = Donation.objects.create(amount=order[0].get('price'), donation_date=order_date)
+                Order.objects.create(order_id=order[0].get('order'), position_id=order[0].get('positionid'), donation=donation, order_date=order_date)
                 return HttpResponseRedirect(reverse_lazy('donor_registration', kwargs={'pk': donation.pk}))
         else:
             return HttpResponseNotAllowed(permitted_methods='GET')

@@ -57,7 +57,7 @@ class DonationExportView(PermissionRequiredMixin, ListView):
         for donation in context['object_list']:
             entry = {
                 "geld": {
-                    "datum": donation.created_at.strftime('%Y-%m-%d'),
+                    "datum": donation.donation_date.strftime('%Y-%m-%d'),
                     "art": "Geldzuwendung",
                     "betrag": float(donation.amount),
                     "verzicht": False
