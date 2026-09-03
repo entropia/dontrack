@@ -37,7 +37,7 @@ tests = [
     'django-stubs==6.0.5',
     'mypy==2.1.0',
     'pylint==4.0.5',
-    'pylint-django==2.7.0',
+    'pylint-django==2.8.0',
     'types-requests~=2.33.0',
 ]
 docs = [
